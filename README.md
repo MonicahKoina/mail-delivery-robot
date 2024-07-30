@@ -30,15 +30,25 @@ Those 11 places are:
 11)Market-place
 
 The 14 roads can be described using an array:
+
 const roads = [
 "Alice;s House-Bob's House", "Alice's House-Cabin",
+
 "Alice's House-Post office", "Bob's House-Town Hall",
+
 "Daria's House-Ernie's House", "Daria's House-Town Hall"
+
 "Ernies House-Grete's House", "Grete's House-Farm",
-"Grete's House-Shop", "Marketplace-Farm"
+
+"Grete's House-Shop", "Marketplace-Farm",
+
 "Marketplace-Town Hall", "Shop-Town Hall"
+
 ],
+
 MEADOWFIELD VILLAGE
+
+
 
 
 
