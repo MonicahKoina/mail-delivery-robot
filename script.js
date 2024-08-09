@@ -63,3 +63,15 @@ function buildGraph(edges) {
             }
             }
             }
+
+
+
+            //Parcel objects aren’t changed when they are moved but re-created
+            let first = new VillageState(
+                "Post Office",
+                [{place: "Post Office", address: "Alice's House"}]
+                );
+                let next = first.move("Alice's House");
+                console.log(next.place);
+                console.log(next.parcels);
+                console.log(first.place);
