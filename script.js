@@ -10,9 +10,10 @@ const roads = [
     ];
 /*The map object 
  buildGraph creates a map object that, for each node,
-stores an array of connected nodes*/
+stores an array of connected nodes
+edge(relationship between two nodes)*/
 
-function buildGraph(edges) {
+function buildGraph(edges) { 
     let graph = Object.create(null);
     function addEdge(from, to) {
     if (from in graph) {
@@ -89,3 +90,17 @@ function buildGraph(edges) {
                     }
                     return {direction: memory[0], memory: memory.slice(1)};
                     }
+                    //Update route-fixed route not soo efficient, add a route finding function
+                    function findRoute(graph, from, to) {
+                        let work = [{at: from, route: []}];
+                        for (let i = 0; i < work.length; i++) {
+                        let {at, route} = work[i];
+                        for (let place of graph[at]) {
+                        if (place == to) return route.concat(place);
+                        if (!work.some(w => w.at == place)) {
+                        work.push({at: place, route: route.concat(place)});
+                        }
+                        }
+                        }
+                        }
+                        
